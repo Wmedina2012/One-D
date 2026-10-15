@@ -4,34 +4,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#181818">
+
   <title>ONE D | DJ Mixes</title>
+
   <style>
-    body {
-      background: #101010;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px 20px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    h1 { font-size: 48px; }
-    a {
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+
+      background:
+        radial-gradient(ellipse at top, #292020 0%, transparent 65%),
+        #181818;
+
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+
+      animation: fadeIn 0.8s ease-out both;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      margin-bottom: 12px;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    }
+
+    .subtitle {
+      color: #bdbdbd;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .button {
       display: block;
-      max-width: 320px;
-      margin: 15px auto;
-      padding: 16px;
-      background: #d71920;
-      color: white;
+      width: 100%;
+      padding: 17px 20px;
+
+      color: #fff;
       text-decoration: none;
-      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+
+      background: linear-gradient(135deg, #f02b35, #c9101c);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 12px;
+
+      box-shadow: 0 5px 14px rgba(215, 25, 32, 0.15);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+      
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Animación al pasar el puntero */
+    .button:hover {
+      transform: translateY(-4px) scale(1.02);
+      background: linear-gradient(135deg, #ff424b, #e51c29);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 25px rgba(215, 25, 32, 0.30);
+    }
+
+    /* Animación al hacer clic o tocar */
+    .button:active {
+      transform: scale(0.96);
+      box-shadow: 0 2px 6px rgba(215, 25, 32, 0.20);
+    }
+
+    /* Accesibilidad al navegar con teclado */
+    .button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+
+    footer {
+      margin-top: 32px;
+      color: #777;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>ONE D</h1>
-  <p>DJ · Open Format · DJ Mixes</p>
-  <a href="https://www.youtube.com/@Dj_One_D">YouTube</a>
-  <a href="https://www.instagram.com/one.d12/">Instagram</a>
-  <a href="https://wa.me/message/G32LS27GDNR6H1">Contrataciones</a>
+  <main class="container">
+    <h1>ONE D</h1>
+
+    <p class="subtitle">DJ · Open Format · DJ Mixes</p>
+
+    <nav class="links" aria-label="Enlaces de ONE D">
+      <a class="button"
+         href="https://www.youtube.com/@Dj_One_D"
+         target="_blank"
+         rel="noopener noreferrer">
+        YouTube
+      </a>
+
+      <a class="button"
+         href="https://www.instagram.com/one.d12/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a class="button"
+         href="https://wa.me/message/G32LS27GDNR6H1"
+         target="_blank"
+         rel="noopener noreferrer">
+        Contrataciones
+      </a>
+
+      <a class="button"
+         href="https://mega.nz/folder/hVlHmSBL#156gmo85_8ATEjfGJHnQ-Q"
+         target="_blank"
+         rel="noopener noreferrer">
+        Promo Assets
+      </a>
+    </nav>
+
+    <footer>© ONE D · DJ</footer>
+  </main>
 </body>
 </html>
+
     
